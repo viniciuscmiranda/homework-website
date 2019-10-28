@@ -1,0 +1,166 @@
+main.align{
+	padding: 0;
+	flex-direction: column;
+}
+
+#image {
+	height: 65vh;
+	width: 100%;
+	position: relative;
+}
+#image figure{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+#image figure img{
+	position: absolute;
+	width: 120%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+#image #fonttitle{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 8px;
+	box-sizing: border-box;
+	background-color: var(--alpw);
+	height: 40px;
+	border-bottom: 2px solid white;
+	position: fixed;
+	top: 0;
+	z-index: 5;
+	transition: border .3s ease;
+}
+#image .sectitle{
+	color: black;
+	font-size: 32px;
+	margin-top: -4px;
+	letter-spacing: 4px;
+	padding: 0;
+}
+#image #fonttitle #h2show{
+	display: flex;
+}
+#image #show{
+	display: none;
+}
+#image #fonttitle #h2show label i{
+	margin-top: 4px;
+	text-indent: 4px;
+	font-size: 24px;
+	transition: transform .2s ease;
+	cursor: pointer;
+	transform-origin: 50%;
+
+}
+#image .maintxt{
+	position: absolute;
+	background-color: var(--alpw);
+	padding: 4px 8px;
+	box-sizing: border-box;
+	height: 20%;
+	overflow-x: auto;
+	bottom: 0;
+	width: 100%;
+	transition: height .3s ease;
+	border-top: 2px solid white;
+	text-align: justify;
+}
+
+#show:checked ~ div#fonttitle{
+	border-bottom: 0px solid white;
+}
+#show:checked ~ p.maintxt{
+	height: calc(100% - 40px);
+	border-top: 0px solid white;
+}
+#show:checked ~ div#fonttitle div#h2show label i{
+	transform: rotate(-180deg);
+	margin-top: 8px;
+} 
+
+#selector {
+	display: flex;
+	padding: 12px;
+	overflow-x: auto;
+	height: 12vh;
+}
+#selector .select{
+	min-width: 250px;
+	width: 250px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	border: 2px solid white;
+	margin-right: 16px;
+	filter: drop-shadow(0 0 4px rgba(0,0,0,0));
+	transition: filter .2s ease;
+}
+#selector .select button{
+	display: none;
+}
+#selector .select figure{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	
+}
+#selector .select figure img{
+	position: absolute;
+	width: 130%;
+	transform: translate(-50%, -50%);
+	top:50%;
+	left: 50%;
+	transition: width .2s ease;
+}
+#selector .select h3{
+	position: absolute;
+	z-index: 1;
+	color: black;
+	font-size: 20px;
+	text-transform: uppercase;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 16px;
+	border-top: solid white;
+	letter-spacing: 1px;
+	transition: letter-spacing .2s ease-out;
+	font-weight: bold;
+	background-color: var(--alpw);
+	text-align: center;
+}
+#selector .select:hover figure img{
+	width: 140%;
+}
+#selector .select:hover h3{
+	letter-spacing: 1.6px;
+}
+
+@media (max-width: 960px){
+	main.align{
+		margin-top: 4px;
+	}
+	
+	#image {
+		height: 70vh;
+
+	}	
+	#image #fonttitle #h2show .sectitle{
+		font-size: 18px;
+		letter-spacing: -1px;
+		margin: auto 0;
+		margin-top: 4px;
+	}
+	#image #fonttitle .fontslider{
+		margin: auto 0;
+	}
+	#image figure img{
+		height: 100%;
+		width: auto;
+	}
+}

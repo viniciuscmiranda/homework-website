@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="../style/geralstyle.css">
+    <link rel="stylesheet" type="text/css" href="../style/heroesstyle.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../img/ico.ico" type="image/x-icon" />
+
+    <title>Hearsthtone - Heróis</title>
+</head>
+
+<body>
+    <div id="bg"></div>
+    <div id="top"></div>
+    <div id="container">
+        <nav id="mainnav">
+            <div class="align">
+                <a id="logo" href="#top" title="Voltar ao Topo">
+                    <figure title="Voltar ao Topo"><img src="../img/ico.png"></figure>
+                    <h1>Hearthstone</h1>
+                </a>
+                <ul>
+                    <li>
+                        <label id="darkmode" tabindex="0">
+                            <input type="button" onclick="darkmode()">
+                            <i class="fa fa-sun-o" title="Modo Noturno: Desligado"></i>
+                            <i class="fa fa-moon-o" title="Modo Noturno: Ligado"></i>
+                        </label>
+
+                    </li>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="heroes.html">Heróis</a></li>
+                    <li><a href="expan.html">Expansões</a></li>
+                </ul>
+            </div>
+        </nav>
+                            <div class="gototxt align" ><a href="heroestxt.html" tabindex="0">Modo Leitura</a></div>
+
+        <main class="align wbox">
+            <section id="select">
+                <h2 class="sectitle">Heróis</h2>
+                <div class="line">
+                    <label style="z-index: 3">
+                        <button onclick="change(this, 0)" id="firstbtn"></button>
+                        <img src="http://wow.zamimg.com/images/hearthstone/heroes/animated/HERO_08.gif" title="Jaina Proudmoore">
+                        <h2 tabindex="0">Jaina</h2>
+                    </label>
+
+                    <label style="z-index: 3">
+                        <button onclick="change(this, 1)"></button>
+                        <img src="http://wow.zamimg.com/images/hearthstone/heroes/animated/HERO_05.gif" title="Rexxar">
+                        <h2 tabindex="0">Rexxar</h2>
+                    </label>
+
+
+                    <label style="z-index: 3">
+                        <button onclick="change(this, 2)"></button>
+                        <img src="http://wow.zamimg.com/images/hearthstone/heroes/animated/HERO_06.gif" title="Malfurion Stormrage">
+                        <h2 tabindex="0">Malfurion</h2>
+                    </label>
+                </div>
+
+                <div class="line">
+                    <label style="z-index: 2">
+                        <button onclick="change(this, 3)"></button>
+                        <img src="http://wow.zamimg.com/images/hearthstone/heroes/animated/HERO_04.gif" title="Uther Lightbringer">
+                        <h2 tabindex="0">Uther</h2>
+                    </label>
+
+                    <label style="z-index: 2">
+                        <button onclick="change(this, 4)"></button>
+                        <img src="http://wow.zamimg.com/images/hearthstone/heroes/animated/HERO_09.gif" title="Anduin Wrynn">
+                        <h2 tabindex="0">Anduin</h2>
+                    </label>
+                    <label style="z-index: 2">
+                        <button onclick="change(this, 5)"></button>
+                        <img src="http://wow.zamimg.com/images/hearthstone/heroes/animated/HERO_03.gif" title="Valeera Sanguinar">
+                        <h2 tabindex="0">Valeera</h2>
+                    </label>
+                </div>
+
+                <div class="line">
+                    <label style="z-index: 1">
+                        <button onclick="change(this, 6)"></button>
+                        <img src="https://media3.giphy.com/media/RZA98dHEUG8a4/giphy.gif" title="Thrall">
+                        <h2 tabindex="0">Thrall</h2>
+                    </label>
+
+                    <label style="z-index: 1">
+                        <button onclick="change(this, 7)"></button>
+                        <img src="http://wow.zamimg.com/images/hearthstone/heroes/animated/HERO_07.gif" title="Gul'dan">
+                        <h2 tabindex="0">Gul'dan</h2>
+                    </label>
+
+                    <label style="z-index: 1">
+                        <button onclick="change(this, 8)"></button>
+                        <img src="http://wow.zamimg.com/images/hearthstone/heroes/animated/HERO_01.gif" title="Garrosh Hellscream">
+                        <h2 tabindex="0">Garrosh</h2>
+                    </label>
+                </div>
+            </section>
+
+            <section id="image">
+                <figure>
+                    <img id="charimg">
+                </figure>
+
+
+                <input type="checkbox" id="show" name="show">
+                <div id="txt">
+                    <div class="innerdiv">
+                        <div>
+                            <h2 id="charname"></h2>
+                            <label for="show"><i class="fa fa-angle-up" tabindex="0" id="showlabel" title="Expandir"></i></label>
+                        </div>
+
+
+                        <div class="fontslider">
+                            <span>Fonte: </span>
+                            <input title="Tamanho da fonte" type="range" min="22" max="32" value="26" oninput="fontsize(this.value)">
+                        </div>
+                    </div>
+
+                    <p class="maintxt" tabindex="0" id="chartxt">
+                    </p>
+
+                </div>
+
+            </section>
+        </main>
+
+
+        <footer>
+            <div class="align">
+                <h1>Hearthstone&copy;2019</h1>
+                <div id="social">
+                    <a href="https://www.facebook.com/HearthstoneBrasil/?brand_redir=498467596862680" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/playhsbrasil" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/playhearthstone/?hl=pt-br" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../script/heroesscript.js"></script>
+    <script src="../script/geralscript.js"></script>
+
+</body>
+
+
+</html>

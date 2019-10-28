@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Patrick Hand', cursive;
+    scroll-behavior: smooth;
+    --alpw: rgba(255, 255, 255, .85);
+    --alpwbx: rgba(255, 255, 255, .4);
+    
+    outline-color: black;
+    /*border: 2px solid lightgray;*/
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+main {
+    margin-top: 24px;
+    margin-bottom: 48px;
+}
+
+#bg {
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+    overflow: hidden;
+    filter: brightness(.4);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-color: #444;
+}
+
+.align {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wbox{
+    background-color: var(--alpw);
+    padding: 12px;
+    box-sizing: border-box;
+    border: 4px solid white;
+}
+
+#mainnav, footer {
+    width: 100%;
+    background-color: var(--alpw);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-sizing: border-box;
+}
+#mainnav{
+    border-bottom: 4px white solid;
+    transition: filter .3s ease;
+}
+#mainnav #logo {
+    display: flex;
+}
+#mainnav #logo figure img {
+    width: 40px;
+    margin-top: 12.5%;
+}
+#mainnav #logo h1 {
+    margin: auto 0 auto 8px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    font-size: 20px;
+}
+#mainnav ul {
+    list-style: none;
+    display: flex;
+    text-align: right;
+    margin: auto 0;
+    box-sizing: border-box;
+}
+#mainnav ul li {
+    margin: 0 4px;
+}
+#mainnav ul li:last-child{
+    margin-right: 0;
+}
+#mainnav ul li a{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+#mainnav ul li a:hover{
+    text-decoration: underline;
+}
+
+.sectitle{
+    font-size: 22px;
+    text-transform: uppercase;;
+    margin-bottom: 8px;
+    letter-spacing: -2px;
+}
+
+.fontslider{ 
+	display: flex;
+	text-align: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    max-width: 200px;
+}
+.fontslider span{
+	font-weight: bold;
+    margin: auto;
+    margin-right: 4px;
+}
+.fontslider input{
+    margin: auto;
+}
+
+#darkmode{
+    outline-color: black;
+	position: absolute;
+	top: 50%;
+	transform: translate(-100%,-40%);
+}
+#darkmode i{ 
+    cursor: pointer;
+    font-size: 20px;
+   	
+}
+#darkmode i[class="fa fa-moon-o"]{ 
+    display: none;
+}
+#darkmode input{ 
+    display: none;
+}
+
+.gototxt{
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 0;
+    height: 16px;
+    position: relative;
+    margin-bottom: -20px;
+    margin-top: 8px;
+}
+.gototxt a{
+    color: white;
+    position: absolute;
+    right: 0;
+    outline-color: white;
+	transition: letter-spacing .2s ease;
+
+}
+.gototxt a:hover{
+	letter-spacing: 1px
+}
+
+footer{
+    padding: 8px 0;
+    border-top: 4px white solid;
+    transition: filter .3s ease;
+    top: 100%;
+    transform: translate(0,-100%);
+    position: fixed;
+}
+footer h1{
+    text-transform: uppercase;
+    font-size: 16px;
+    margin: auto 0;
+}
+footer #social a i{
+    margin-left: 4px;
+    font-size: 22px;
+}
+
+@media (max-width: 960px){
+    .align{
+        width: 98%;
+    }   
+    .gototxt{
+        margin-bottom: 0;
+    }
+    main{
+        margin-bottom: 4px;
+    }
+    
+    #mainnav #logo figure img{
+        width: 32px;
+    }
+    #mainnav #logo h1{
+        display: none;
+    }
+    #mainnav ul li a{
+        font-size: 24px;
+    }
+    #mainnav ul li i{
+        font-size: 24px;
+        margin-right: 12px;
+    }
+    
+    .sectitle{
+        text-align: center;
+        font-size: 32px;
+    }
+    .fontslider{
+        margin: auto;
+        margin-bottom: 12px;
+    }
+    
+    #darkmode{
+        margin-top: -2px;
+		
+    }
+    
+    footer{
+        position: initial;
+        transform: initial;
+    }
+}

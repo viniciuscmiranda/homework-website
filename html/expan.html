@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" type="text/css" href="../style/geralstyle.css">
+	<link rel="stylesheet" type="text/css" href="../style/expanstyle.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="../img/ico.ico" type="image/x-icon" />
+
+	<title>Hearsthtone - Expansões</title>
+</head>
+
+<body>
+	<div id="bg"></div>
+	<div id="top"></div>
+	<div id="container">
+		<nav id="mainnav">
+			<div class="align">
+				<a id="logo" href="#top" title="Voltar ao Topo">
+					<figure><img src="../img/ico.png"></figure>
+					<h1>Hearthstone</h1>
+				</a>
+				<ul>
+					<li>
+						<label id="darkmode" tabindex="0">
+							<input type="button" onclick="darkmode()">
+							<i class="fa fa-sun-o" title="Modo Noturno: Desligado"></i>
+							<i class="fa fa-moon-o" title="Modo Noturno: Ligado"></i>
+						</label>
+
+					</li>
+					<li><a href="index.html">Início</a></li>
+					<li><a href="heroes.html">Heróis</a></li>
+					<li><a href="expan.html">Expansões</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="gototxt align" ><a href="exptxt.html" tabindex="0">Modo Leitura</a></div>
+
+		<main class="align wbox">
+			<section id="image">
+				<figure><img id="expimg"></figure>
+				<input type="checkbox" id="show" name="show">
+
+				<div id="fonttitle">
+					<div id="h2show">
+						<h2 id="expname" class="sectitle" tabindex="0"></h2>
+
+						<label for="show" id="showlabel">
+							<i class="fa fa-angle-up" tabindex="0" title="Expandir"></i>
+						</label>
+					</div>
+
+					<div class="fontslider">
+						<span>Fonte: </span>
+						<input title="Tamanho da fonte" type="range" min="22" max="32" value="26" oninput="fontsize(this.value)">
+					</div>
+				</div>
+
+				<p class="maintxt" id="exptxt" tabindex="0"></p>
+
+			</section>
+
+			<section id="selector">
+				<label class="select">
+					<button onclick="change(0, this)" id="firstbtn"></button>
+					<figure><img src="https://www.hearthstonetopdecks.com/wp-content/uploads/2014/04/curse-naxxramas001-1680x945.jpg"></figure>
+					<h3 tabindex="0">Curse of Naxxramas</h3>
+				</label>
+
+				<label class="select">
+					<button onclick="change(1, this)"></button>
+					<figure><img src="https://www.hearthstonetopdecks.com/wp-content/uploads/2015/03/blackrock-mountain-wallpaper.jpg"></figure>
+					<h3 tabindex="0">Blackrock Mountain</h3>
+				</label>
+
+				<label class="select">
+					<button onclick="change(2, this)"></button>
+					<figure><img src="http://7wallpapers.net/wp-content/uploads/2_Hearthstone-League-of-Explorers.jpg"></figure>
+					<h3 tabindex="0">League of Explorers</h3>
+				</label>
+
+				<label class="select">
+					<button onclick="change(3, this)"></button>
+					<figure><img src="https://i.ytimg.com/vi/qlHx7YNWYGY/maxresdefault.jpg"></figure>
+					<h3 tabindex="0">One Night in Karazhan</h3>
+				</label>
+
+				<label class="select">
+					<button onclick="change(4, this)"></button>
+					<figure><img src="https://www.hearthstonetopdecks.com/wp-content/uploads/2017/07/knightsofthefrozenthronewallpaper001.jpg"></figure>
+					<h3 tabindex="0">Frozen Throne</h3>
+				</label>
+
+				<label class="select">
+					<button onclick="change(5, this)"></button>
+					<figure><img src="https://progameguides.com/wp-content/uploads/2019/03/rise-of-shadows-wallpaper-1920x1080-general013.jpg"></figure>
+					<h3 tabindex="0">Rise of Shadows</h3>
+				</label>
+
+
+				<span style="min-width: 1px"></span>
+
+
+
+			</section>
+		</main>
+
+		<footer>
+			<div class="align">
+				<h1>Hearthstone&copy;2019</h1>
+				<div id="social">
+					<a href="https://www.facebook.com/HearthstoneBrasil/?brand_redir=498467596862680" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/playhsbrasil" target="_blank"><i class="fa fa-twitter"></i></a>
+					<a href="https://www.instagram.com/playhearthstone/?hl=pt-br" target="_blank"><i class="fa fa-instagram"></i></a>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="../script/expanscript.js"></script>
+	<script src="../script/geralscript.js"></script>
+
+</body></html>

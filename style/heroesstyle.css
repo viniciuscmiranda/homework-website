@@ -1,0 +1,154 @@
+#select{
+    margin: auto;
+}
+#select .sectitle{
+    text-align: center;
+}
+#select .line{
+    min-width: 432px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 220px;
+    margin-top: -48px;
+}
+#select .line button{
+    display: none;
+}
+#select .line label{
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0));
+    transition: filter ease-out .7s;
+    cursor: pointer;
+ 
+}
+#select .line label img{
+    height: 37vh;
+    max-height: 288px;
+}
+#select .line label h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -48px;
+}
+
+#image{
+    position: relative;
+    min-width: 400px;
+    width: 600px;
+    margin-left: 2vw;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+#image figure{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#image figure img{
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 55%;
+}
+#image #txt{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--alpw);
+    height: 30%;
+    min-height: 140px;
+    box-sizing: border-box;
+    border-top: 2px solid white;
+    margin: 0;
+    overflow-y: auto;
+    text-align: justify;
+    transition: height ease-out .2s;
+    width: 100%;
+}
+#image #txt .innerdiv{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255,255,255,.95);
+    padding: 4px 16px;
+    margin-bottom: -8px;
+    box-sizing: border-box;
+    border-bottom: 2px solid white;
+}
+#image #txt .innerdiv div{
+    display: flex;
+}
+#image #txt div i{
+    font-size: 24px;
+    margin: 0 4px;
+    margin-top: 4px;
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+#image #txt .maintxt{
+    padding: 16px;
+}
+#image #txt h2{
+    cursor: pointer;
+}
+
+#show{
+    display: none;
+}
+#show:checked + #txt{
+    height: 100%;
+}
+#show:checked + #txt div i{
+    transform: rotate(-180deg);
+    margin-top: 8px;
+} 
+
+@media (max-width: 960px){
+    main{
+        flex-direction: column-reverse;
+        overflow: hidden;
+        margin: 4px;
+    }
+    
+    #select{
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        margin: 8px 0;
+    }
+    #select .sectitle{
+        display: none;
+    }
+    #select .line{   
+        min-width: initial;
+    }
+    
+    #image{
+        height: 60vh;
+        width: 100%;
+        margin: 0;
+        min-width: 0;
+    }
+    #image figure{
+        width: 100%;
+    }
+    #image #txt .innerdiv div{
+       margin: auto;
+        margin-bottom: 8px;
+		padding: 0;
+    }
+	#image #txt .innerdiv {
+      padding: 4px 0;
+    }
+    #image #txt .innerdiv #charname{
+        text-transform: uppercase;
+		font-size: 16px;
+		letter-spacing: -.1px;
+		margin-top: 6px;
+	}
+	#image #txt .innerdiv .fontslider{
+		margin-top: 0;
+	}
+}
